@@ -1,0 +1,93 @@
+//App.js
+
+import Card from './Card';
+import "./index.css"
+
+function App() {
+  return (
+    <div id="app">
+      <h1>Available Experts</h1>
+      <Card name="Anthony Blake"
+      description = "Blake is a professor of Computer Science at the University of
+          Illinois."
+      children = <a href="mailto:blake@example.com">Email Anthony</a>
+      />
+
+
+
+
+      <Card name="Maria Miles">
+        <p>
+          Maria is a professor of Computer Science at the University of
+          Illinois.
+        </p>
+        <p>
+          <a href="mailto:blake@example.com">Email Maria</a>
+        </p>
+      </Card>
+    </div>
+  );
+}
+
+export default App;
+
+
+//Card.js
+
+export default function Card ({name,description , children}){
+    return (
+        <li>
+            <h1> {name} </h1>
+            <h2> {description} </h2>
+            <p> {children}</p>
+        
+        </li>
+        
+        );
+  
+}
+
+
+//Index.css
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Lato:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(#dfdee0, #c3c3c4);
+  color: #000000;
+  min-height: 100vh;
+}
+
+.card {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 30rem;
+  border-radius: 6px;
+  background: linear-gradient(#254041, #203031);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.card p {
+  margin: 0.5rem 0;
+}
+
+.card a {
+  color: #000000;
+  text-decoration: none;
+}

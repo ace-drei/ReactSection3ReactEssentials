@@ -1,7 +1,8 @@
-export default function ({children}) {
+export default function ({children, onSelect}) {
+
   return (
     <li>
-      <button>{children}</button>
+      <button onClick = {onSelect } >{children}</button>
     </li>
   );
 }
